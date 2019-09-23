@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    include 'dbConnection.php'; 
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -137,6 +141,34 @@
 					
 					</div>
 				</div><!-- .postcontent end -->	
+
+
+                <!--- dynamic videos links -->
+
+                <div class="container clear-bottommargin clearfix">
+                        <div class="row">
+                            <?php 
+                                $result = mysqli_query($conn,"SELECT *  FROM video_table");
+                                while ($row = $result->fetch_assoc()) { ?>
+    
+                            <div class="col-lg-3 col-md-6 bottommargin">
+                                <div class="ipost clearfix">
+                                    <div class="entry-image">
+                                            <iframe src="<?php echo $row['link']; ?>" width="500" height="281" frameborder="0" webkitallowfullscreen
+                                            mozallowfullscreen allowfullscreen></iframe>
+                                    </div>
+                                    <div class="entry-title" style="text-align: center;"> 
+                                        <h3 style="color:#1ABC9C;"><?php echo $row['title']; ?></h3>
+                                    </div>
+                                   
+                                    
+                                </div>
+                            </div>
+                        <?php } ?>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+
 				<div class="container clear-bottommargin clearfix">
                         <div class="row">
     

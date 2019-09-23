@@ -169,7 +169,7 @@
                                     </div>
                                    
                                     <!-- <button>whatsapp</button> -->
-                                    <a href="product_detail.php" class="btn inquiry_btn">View Detail</a>
+                                    <a href="product_detail.php?id=<?php echo $row['id']; ?>" class="btn inquiry_btn">View Detail</a>
                                     
                                 </div>
                             </div>

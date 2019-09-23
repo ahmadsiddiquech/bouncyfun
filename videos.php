@@ -183,16 +183,16 @@
                             <div class="col-lg-3 col-md-6 bottommargin">
                                 <div class="ipost clearfix">
                                     <div class="entry-image">
-                                        <a href="#"><img class="image_fade" src="image/v3.jpg" alt="Image"></a>
+                                        <a href="#"><img class="image_fade" src="images/v2.jpg" alt="Image"></a>
                                     </div>
-                                  
+                                    
                                     <div style="text-align: center;"> 
-                                            <a href="https://api.whatsapp.com/send?phone=971544449359&text=&source=&data=" target="_blank" class="btn btn-xm inquiry_btn">Inquiry By WhatsApp </a>
+                                            <a href="https://api.whatsapp.com/send?phone=971544449359&text=&source=&data="  target="_blank" class="btn btn-xm inquiry_btn">Inquiry By WhatsApp </a>
                                             <br/><br/>
-                                            <a href="view_videos.php" class="btn btn-xm view_btn" >Click here for videos</a>
+                                            <a href="view_videos.php" class="btn btn-xm view_btn">Click here for videos </a>
                                     </div>
                                    
-
+                                  
                                 </div>
                             </div>
     

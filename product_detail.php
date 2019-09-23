@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    include 'dbConnection.php'; 
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -166,26 +170,28 @@
                                     <i class="icon-whatsapp"></i>&nbsp;&nbsp;WhatsApp</a>
                                 </div>
                             <!--end-->
-
+                            <?php 
+                            $id = $_GET['id'];
+                                $result = mysqli_query($conn,"SELECT *  FROM image_table WHERE id = '$id'");
+                                while ($row = $result->fetch_assoc()) { ?>
     
                             <div class="col_half nobottommargin topmargin-lg" >
     
-                                <img src="images/g1.jpg" alt="Image" class="center-block" > 
+                                <img src="<?php echo $row['image'] ; ?>" alt="Image" class="center-block" > 
     
                             </div>
-    
                             <div class="col_half nobottommargin topmargin-lg col_last">
     
                                 <div class="heading-block topmargin-lg">
-                                    <h2 style="color: #1ABC9C;"> Micky Slide (MS 02)</h2>
-                                    <span>L9 x W6 x H8m</span>
+                                    <h2 style="color: #1ABC9C;"><?php echo $row['title']; ?></h2>
                                 </div>
     
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet cumque, perferendis accusamus porro illo exercitationem molestias, inventore obcaecati ut omnis voluptatibus ratione odio amet magnam quidem tempore necessitatibus quaerat, voluptates excepturi voluptatem, veritatis qui temporibus.</p>
+                                <p><?php echo $row['description']; ?></p>
     
                                 <a id="enquiry" href="#enquiry" class="btn button-large inquiry_btn noleftmargin" > Send an Enquiry</a>
     
                             </div>
+                        <?php } ?>
     
                         </div>
                     </div>
