@@ -177,7 +177,7 @@
     
                             <div class="col_half nobottommargin topmargin-lg" >
     
-                                <img src="<?php echo $row['image'] ; ?>" alt="Image" class="center-block" > 
+                                <img src="<?php echo $row['image'] ; ?>" alt="Image" class="center-block" style="height: 320px;width: 300px"> 
     
                             </div>
                             <div class="col_half nobottommargin topmargin-lg col_last">

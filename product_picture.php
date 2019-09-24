@@ -161,7 +161,7 @@
                                     <div class="col-lg-3 col-md-6 bottommargin">
                                     <div class="ipost clearfix" style="text-align: center;"> 
                                     <div class="entry-image">
-                                        <a href="#"><img class="image_fade" src="<?php echo $row['image'] ; ?>" alt="Image"></a>
+                                        <a href="#"><img class="image_fade" src="<?php echo $row['image'] ; ?>" alt="Image" style="height: 320px;width: 300px"></a>
                                     </div>
                                     <div class="entry-title">
                                         <h3 style="color:#1ABC9C;"> <?php echo $row['title']; ?> </h3>
