@@ -48,14 +48,12 @@
                 height: 30px;
                 width:200px;
                 font-size: 12px;
-    
                 background-color: white;
                 border-color: #E81F6F;
                 border-radius: 16px;
                 color: #E81F6F;
             }
             .view_btn:hover{
-               
                 background-color: #E8329E;
                 color:white;
     

@@ -165,7 +165,8 @@
                                     </div>
                                     <div class="entry-title">
                                         <h3 style="color:#1ABC9C;"> <?php echo $row['title']; ?> </h3>
-                                        <p class="small"><?php echo $row['description']; ?><p>
+                                      
+                                        <p class="small"><?php echo substr($row['description'], 0, 50); ?><p>
                                     </div>
                                    
                                     <!-- <button>whatsapp</button> -->

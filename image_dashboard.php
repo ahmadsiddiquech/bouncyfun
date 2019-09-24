@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    include 'dbConnection.php'; 
     if (isset($_SESSION["login_session"]) && !empty($_SESSION["login_session"])) { ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
@@ -61,6 +62,7 @@
                 </nav>
             </div>
     <div class="section">
+        <h1>UPLOAD IMAGE</h1>
         <form  action="upload_image.php" method="POST" enctype="multipart/form-data">
             <div class="col-md-8">
                 <label>Title</label>
@@ -77,6 +79,35 @@
                 <button class="btn send_btn" type="submit">Upload</button>
             </div>
         </form>
+    </div>
+    <div class="section">
+        <h1>DELETE IMAGE</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form action="delete_image.php" method="POST">
+                    <div class="col-md-8">
+                        <label>ID:</label>
+                        <input type="number" required id="id_no" name="id_no" class="form-control" />
+                    </div>
+                    <div style="padding-left: 30px;padding-top: 30px">
+                        <button class="btn send_btn" type="submit">Delete</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6" style="height: 250px;">
+                <h3>ID----title</h3>
+                <div style="height: 249px;overflow: auto;">
+                    <?php
+                        $result = mysqli_query($conn,"SELECT *  FROM image_table");
+                        while ($row = $result->fetch_assoc()) { 
+                            echo $row['id'].'-----'.$row['title'];
+                            echo '<hr>';
+                        } 
+                    ?>
+
+                </div>
+            </div>
+        </div>
     </div>
 
     
